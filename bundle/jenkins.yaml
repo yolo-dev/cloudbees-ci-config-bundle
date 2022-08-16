@@ -1,3 +1,14 @@
+cloudbees-slack-integration:
+  config:
+    slackToken: "${slackToken}"
+    slackWorkspace: "T010A455W77"
+    users:
+    - id: "${GITHUB_USER}"
+      jenkins: "${GITHUB_USER}"
+      optedIn: true
+      scmId: "${GITHUB_USER}"
+      slack: "REPLACE_USER_EMAIL"
+      slackWorkspace: "T010A455W77"
 cloudbees-pipeline-policies:
   config:
     policies:
@@ -16,7 +27,7 @@ jenkins:
       - key: "GITHUB_APP"
         value: "${GITHUB_APP}"
   quietPeriod: 0
-  systemMessage: 'Jenkins configured using CloudBees CI CasC - v2'
+  systemMessage: 'Jenkins configured using CloudBees CI CasC - v5'
 globalCloudBeesPipelineTemplateCatalog:
   catalogs:
   - branchOrTag: "main"
